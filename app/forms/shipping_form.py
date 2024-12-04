@@ -4,7 +4,7 @@ from wtforms.validators import DataRequired
 from map.map import map
 
 def generate_choices(data, value):
-    choices = [(f'Chose {value}', f'Chose {value}')] + [(values, key) for key, values in data.items()]
+    choices = [(f'Chose {value}', f'Chose {value}')] + [(key, key) for key in data.keys()]
     return choices
 
 
