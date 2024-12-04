@@ -19,6 +19,7 @@ def new_package():
                               )
         db.session.add(new_package)
         db.session.commit()
+        Package.advance_all_locations()
         return redirect('/')
 
 
